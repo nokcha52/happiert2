@@ -30,7 +30,6 @@
 }
 
 body {
-    /* margin: 0 auto; */
     position: relative;
 }
 header {
@@ -89,6 +88,11 @@ header {
 .head_left li > a:hover::after {
     transform: scaleX(1);
 }
+.upper_middle {
+    transform: translateX(-160px);
+    display: flex;
+    align-items: center;
+}
 .upper_middle > h1 {
     color: rgb(212, 6, 6);
     font-family: 'Cafe24ClassicType';
@@ -133,8 +137,7 @@ header {
     width: 30px;
     height: 30px;
     border-end-end-radius: 500px;
-    transform: translateY(-600px);
-    transform: translateX(40px);
+    transform: translate(40px,0);
     margin: 0;
     position: fixed;
     bottom: 45px;
@@ -218,7 +221,9 @@ main {
     font-size: 14px;
     font-family: 'GMarketSans';
 }
-
+img {
+    display: block;
+}
 .main3 {
     width: 100%;    
     overflow-x: hidden;
@@ -245,6 +250,10 @@ main {
 .main3 > div {
     display: flex;
     justify-content: center;
+    gap: 20px;
+}
+.main3 > div > figure {
+    display: flex;
     gap: 20px;
 }
 .main3 > div > figure >img,
