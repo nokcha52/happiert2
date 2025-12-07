@@ -135,9 +135,9 @@ header {
 .pattern > div {
     background-color: rgb(167, 36, 36);    
     width: 30px;
-    height: 30px;
+    height: 36px;
     border-end-end-radius: 500px;
-    transform: translate(40px,0);
+    transform: translate(40px,-1px);
     margin: 0;
     position: fixed;
     bottom: 45px;
