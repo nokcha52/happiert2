@@ -196,8 +196,23 @@
     .main3 > div > div > div > p {
         font-size: 16px;
     }
+    .main5 > div > h2 {
+        font-size: 50px;
+    }
+    .main5 > div > p {
+        font-size: 15px;
+    }
+    footer > h2 {
+        font-size: 50px;
+    }
+    footer >div > div > h3 {
+        font-size: 22px;
+    }
 }
 @media (max-width:500px) {
+    .main1 > div {
+        transform: translateX(-40px);
+    }
     .main1 > .main1_text > h2 {
         font-size: 32px;
     }
@@ -225,14 +240,26 @@
     }
 }
 @media (max-width:400px) {
-    .main1 > .main1_text {
-        left: 20px;
+    .main5 > div > h2 {
+        font-size: 40px;
     }
+    .main5 > div > p {
+        font-size: 12px;
+    }    
     .main1 > .main1_text > h2 {
         font-size: 24px;
         line-height: 48px;
     }
     .main1 > .main1_text > p {
         font-size: 12px;
+    }
+    .main3_text2 > div > div > p > br {
+        display: none;
+    }
+    footer > h2 {
+        font-size: 40px;
+    }
+    footer >div > div > h3 {
+        font-size: 20px;
     }
 }
