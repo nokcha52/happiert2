@@ -7,10 +7,10 @@
     <script src="https://kit.fontawesome.com/5dece3bbcb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">     
+    <link rel="stylesheet" href="./css/media.css">  
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="upper">
             <a href="#">1초 회원 가입하고 4만원 쿠폰팩 받기</a>            
         </div>
@@ -214,5 +214,20 @@
         </div>
 
     </footer>
+    <script>
+        const header = document.querySelector("#header");
+        console.log(header);
+
+        let posY = 0;
+        window.addEventListener("scroll",(e)=> {
+            if(posY < window.scrollY) {
+                header.classList.add("hide");
+            }else {
+                header.classList.remove("hide");
+            }
+
+            posY = window.scrollY;
+        });
+    </script>
 </body>
 </html>
