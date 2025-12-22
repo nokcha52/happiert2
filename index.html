@@ -89,8 +89,8 @@
             </div>
             
         </section>
-        <article class="main2">
-            <div class="price_box">
+        <article class="main2 box">
+            <div class="price_box content fade to_bottom delay">
                 <img src="./img/section/section1_1.jpg" alt="price1">
                 <p>장내 환경에 초점을 맞춘 해피어트 마이크로바이옴 쉐이크 곡물맛 (3주 플랜/1통)</p>
                 <span>₩39,000</span>
@@ -99,7 +99,7 @@
                     <p>32% off</p>
                 </div>
             </div>
-            <div class="price_box">
+            <div class="price_box content fade to_bottom delay">
                 <img src="./img/section/section1_2.jpg" alt="price2">
                 <p>장내 환경에 초점을 맞춘 해피어트 마이크로바이옴 쉐이크 곡물맛 (2개월 플랜/3통)</p>
                 <span>₩99,000</span>
@@ -108,7 +108,7 @@
                     <p>44% off</p>
                 </div>
             </div>
-            <div class="price_box">
+            <div class="price_box content fade to_bottom delay">
                 <img src="./img/section/section1_3.jpg" alt="price3">
                 <p>장내 환경에 초점을 맞춘 해피어트 마이크로바이옴 쉐이크 곡물맛 (4개월 플랜/5통)</p>
                 <span>₩159,000</span>
@@ -126,12 +126,14 @@
             Make it Happier Easier than ever
             Make it Happier Easier than ever
             </p>
-            <div class="main3_text">
-                <figure>
+            <div class="main3_text box">
+                <figure class="content fade to_bottom delay">
                     <img src="./img/section/section2_1.png" alt="diet_tech1">
+                </figure>
+                <figure class="content fade to_bottom delay">
                     <img src="./img/section/section2_2.png" alt="diet_tech2">
                 </figure>
-                <div>
+                <div class="content fade to_bottom delay">
                     <div>
                         <h3>다이어트 테크닉</h3>
                         <p>미생물을 활용한 해피어트만의 독보적인 다이어트 테크닉을<br>
@@ -142,8 +144,8 @@
                     </div>
                 </div>
             </div>
-            <div class="main3_text2">
-                <div>
+            <div class="main3_text2 box">
+                <div class="content fade to_bottom delay">
                     <div>
                         <h3>해피어트 연구 노트</h3>
                         <p>건강을 되찾은 수많은 사례와 우리 몸속에서 일어나는 변화를 연구하여<br>
@@ -153,8 +155,10 @@
                         <button>view more</button>
                     </div>
                 </div>
-                <figure>
+                <figure class="content fade to_bottom delay">
                     <img src="./img/section/section2_3.png" alt="research_note1">
+                </figure>
+                <figure class="content fade to_bottom delay">
                     <img src="./img/section/section2_4.png" alt="research_note2">
                 </figure>                
             </div>
@@ -172,7 +176,7 @@
                 <div class="circle">4</div>
             </div>
         </section>
-        <section class="main5">
+        <section class="main5 content fade to_bottom delay">
             <div>
                 <h2>Happier + Diet</h2>
                 <p>해피어트는 단 한 가지,<br>
@@ -227,6 +231,21 @@
             }
 
             posY = window.scrollY;
+        });
+
+        const content = document.getElementsByClassName("content");
+        console.log(content);
+        window.addEventListener("scroll",()=>{
+            const windowHeight = window.innerHeight;
+            for(let i=0; i < content.length; i++){
+                const contentTop = content[i].getBoundingClientRect().top;
+                console.log(contentTop);
+                if(contentTop-windowHeight < 0) {
+                    content[i].classList.add("in");
+                }else {
+                    content[i].classList.remove("in");
+                }
+            }
         });
     </script>
 </body>
